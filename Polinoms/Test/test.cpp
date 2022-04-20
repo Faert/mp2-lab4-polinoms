@@ -71,11 +71,21 @@ TEST(List, can_Merge_Sort)
 	B.add(0);
 	B.add(1);
 	B.add(2);
-	size_t i = 2;
+	B.add(2);
+	B.add(1);
+	
+	List<int> S;
+	S.add(2);
+	S.add(2);
+	S.add(1);
+	S.add(1);
+	S.add(0);
+
 	B = Merge_Sort(B);
-	for (List<int>::Iter it = B.begin(); it != B.end(); ++it, i--)
+
+	for (List<int>::Iter itB = B.begin(), itS = S.begin(); itB != B.end(); ++itB, ++itS)
 	{
-		EXPECT_EQ(*it, i);
+		EXPECT_EQ(*itB, *itS);
 	}
 }
 

@@ -10,10 +10,9 @@ int main()
 	while (globalflag)
 	{
 		Polinom First;
-		Polinom Second;
 		bool flag = false;
 
-		cout << "Enter your first polinom (-3.2*x^0*y^3*z^2 enter as -3.2 32):\n";
+		cout << "Enter your first polinom (x^1*y^1*z^1 -3.2*x^0*y^3*z^2 enter as 1 111 -3.2 32):\n";
 		while (!flag)
 		{
 			try
@@ -32,6 +31,7 @@ int main()
 		bool flag0 = false;
 		while (!flag0)
 		{
+			Polinom Second;
 			flag = false;
 			cout << "Enter your second polinom (-3.2*x^0*y^3*z^2 enter as -3.2 32):\n";
 			while (!flag)
